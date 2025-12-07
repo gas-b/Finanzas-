@@ -4,7 +4,7 @@ import numpy as np
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.model_selection import train_test_split
 
-df = pd.read_excel("A01615309_Actividad2_Registro-1.xlsx")
+df = pd.read_csv("A01615309_Actividad2_Registro-1.csv")
 
 df["Fecha (dd/mm/aa)"] = pd.to_datetime(df["Fecha (dd/mm/aa)"])
 df["Tiempo invertido"] = df["Tiempo invertido"].str.replace(" min","").astype(float)
